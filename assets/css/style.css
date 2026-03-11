@@ -1,163 +1,82 @@
-/* Reset & 기본 스타일 */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background-color: #fafafa;
-  color: #222;
-  line-height: 1.6;
+/* 헤더 컨테이너 */
+.profile-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 40px 20px;
+  background-color: #ffffff;
+  border-radius: 20px; /* 사각형 둥글게 */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   max-width: 900px;
-  margin: auto;
+  margin: 40px auto;
+  flex-wrap: wrap; /* 모바일에서 아래로 쌓이게 */
 }
 
-/* 프로필 헤더 */
-.profile {
-  text-align: center;
-  padding-bottom: 40px;
-  border-bottom: 1px solid #ddd;
+/* 텍스트 영역 */
+.profile-text {
+  flex: 1;
+  min-width: 250px;
 }
 
-.profile-img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
-}
-
-.profile h1 {
-  font-weight: 700;
+.profile-text h1 {
   font-size: 2.8rem;
-  color: #111;
-  margin-bottom: 6px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
 }
 
-.profile p {
+.profile-text p {
   font-size: 1.1rem;
   color: #555;
-  font-weight: 500;
+  margin-bottom: 20px;
 }
 
 /* 기술 스택 */
 .skills {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 12px;
-  margin-top: 30px;
   list-style: none;
 }
 
 .skills li {
   background-color: #e0e0e0;
   padding: 8px 16px;
-  border-radius: 20px;
+  border-radius: 15px;
   font-weight: 600;
-  font-size: 0.95rem;
   color: #444;
-  transition: background-color 0.3s ease;
-  cursor: default;
 }
 
-.skills li:hover {
-  background-color: #a0a0a0;
-  color: #fff;
-}
-
-/* 프로젝트 섹션 */
-.projects {
-  margin-top: 60px;
-}
-
-.projects h2 {
-  font-weight: 700;
-  font-size: 2rem;
-  color: #111;
-  margin-bottom: 24px;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 6px;
-}
-
-/* 프로젝트 그리드 */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-}
-
-/* 프로젝트 카드 */
-.project-card {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  padding: 20px;
+/* 이미지 영역 */
+.profile-image-container {
+  flex: 0 0 160px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
+  justify-content: flex-end;
 }
 
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+.profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 15px; /* 살짝 둥글게 */
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
 
-.project-card h3 {
-  font-size: 1.4rem;
-  color: #222;
-  margin-bottom: 12px;
-  font-weight: 700;
+.profile-img:hover {
+  transform: scale(1.05);
 }
 
-.project-card p {
-  flex-grow: 1;
-  color: #555;
-  font-size: 1rem;
-  margin-bottom: 20px;
-  line-height: 1.4;
-}
-
-/* 링크 버튼 */
-.project-card a {
-  text-align: center;
-  display: inline-block;
-  padding: 10px 22px;
-  background-color: #007acc;
-  color: white;
-  border-radius: 25px;
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0,122,204,0.4);
-  transition: background-color 0.3s ease;
-}
-
-.project-card a:hover {
-  background-color: #005fa3;
-}
-
-/* 반응형 */
+/* 모바일 대응 */
 @media (max-width: 600px) {
-  body {
-    padding: 30px 15px;
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
   
-  .profile h1 {
-    font-size: 2.2rem;
-  }
-  
-  .skills li {
-    font-size: 0.9rem;
-    padding: 7px 14px;
-  }
-  
-  .projects h2 {
-    font-size: 1.6rem;
+  .profile-image-container {
+    justify-content: center;
+    margin-top: 20px;
   }
 }
