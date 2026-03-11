@@ -1,167 +1,163 @@
-/* 전체 바디 */
-body {
-  background: linear-gradient(135deg, #1e1e2f, #27293d);
-  color: #f0f0f5;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Reset & 기본 스타일 */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #fafafa;
+  color: #222;
+  line-height: 1.6;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
 }
 
 /* 프로필 헤더 */
 .profile {
   text-align: center;
-  padding: 60px 20px 40px 20px;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 0 30px #6c63ff;
-  border-radius: 15px;
-  max-width: 600px;
-  margin: 40px auto 60px auto;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #ddd;
 }
 
-/* 프로필 사진 */
 .profile-img {
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  border: 5px solid #6c63ff;
   object-fit: cover;
-  box-shadow: 0 0 15px #6c63ff;
-  transition: transform 0.3s ease;
-}
-.profile-img:hover {
-  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
 }
 
-/* 이름 & 소개 */
 .profile h1 {
-  margin-top: 20px;
-  font-size: 3rem;
-  font-weight: 900;
-  letter-spacing: 2px;
-  color: #6c63ff;
-  text-shadow: 0 0 10px #6c63ff;
+  font-weight: 700;
+  font-size: 2.8rem;
+  color: #111;
+  margin-bottom: 6px;
 }
 
 .profile p {
-  margin-top: 10px;
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #dcdcffaa;
+  font-size: 1.1rem;
+  color: #555;
+  font-weight: 500;
 }
 
 /* 기술 스택 */
 .skills {
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 12px;
   margin-top: 30px;
-  padding: 0;
+  list-style: none;
 }
 
 .skills li {
-  background: #6c63ff;
-  padding: 10px 20px;
-  border-radius: 30px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #fff;
-  box-shadow: 0 0 8px #6c63ffaa;
-  transition: background 0.3s ease, transform 0.3s ease;
+  background-color: #e0e0e0;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #444;
+  transition: background-color 0.3s ease;
   cursor: default;
 }
 
 .skills li:hover {
-  background: #5a50d8;
-  transform: scale(1.1);
+  background-color: #a0a0a0;
+  color: #fff;
 }
 
 /* 프로젝트 섹션 */
 .projects {
-  max-width: 900px;
-  margin: 0 auto 80px auto;
-  padding: 0 20px;
+  margin-top: 60px;
 }
 
 .projects h2 {
-  font-size: 2.5rem;
-  text-align: center;
-  color: #6c63ff;
-  margin-bottom: 40px;
-  text-shadow: 0 0 10px #6c63ff;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #111;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 6px;
 }
 
 /* 프로젝트 그리드 */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  gap: 24px;
 }
 
 /* 프로젝트 카드 */
 .project-card {
-  background: #2f2f48;
-  padding: 25px;
-  border-radius: 20px;
-  box-shadow: 0 8px 15px rgba(108, 99, 255, 0.4);
-  color: #e0e0ff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
 }
 
 .project-card:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 15px 25px rgba(108, 99, 255, 0.7);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
 .project-card h3 {
-  margin: 0 0 15px 0;
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: #a39eff;
+  font-size: 1.4rem;
+  color: #222;
+  margin-bottom: 12px;
+  font-weight: 700;
 }
 
 .project-card p {
   flex-grow: 1;
-  font-size: 1.1rem;
-  color: #cfcfff;
+  color: #555;
+  font-size: 1rem;
   margin-bottom: 20px;
+  line-height: 1.4;
 }
 
-/* 프로젝트 링크 */
+/* 링크 버튼 */
 .project-card a {
   text-align: center;
   display: inline-block;
-  padding: 12px 25px;
-  background: #6c63ff;
-  color: #fff;
-  border-radius: 50px;
+  padding: 10px 22px;
+  background-color: #007acc;
+  color: white;
+  border-radius: 25px;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: 700;
-  box-shadow: 0 0 10px #6c63ff;
-  transition: background 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,122,204,0.4);
+  transition: background-color 0.3s ease;
 }
 
 .project-card a:hover {
-  background: #574bcf;
+  background-color: #005fa3;
 }
 
-/* 반응형 간단 지원 */
+/* 반응형 */
 @media (max-width: 600px) {
+  body {
+    padding: 30px 15px;
+  }
+  
   .profile h1 {
     font-size: 2.2rem;
   }
   
   .skills li {
-    font-size: 1rem;
-    padding: 8px 15px;
+    font-size: 0.9rem;
+    padding: 7px 14px;
   }
   
   .projects h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
