@@ -1,44 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>경대영 프로필</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>홍성빈 · Web Developer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<section class="about">
-  <div class="about-text">
-    <h2>ABOUT</h2>
-    <p><strong>경대영</strong> / 19세</p>
-    <p>
-      안녕하세요! 웹 개발자 홍성빈입니다.<br>
-      다양한 프로젝트를 통해 다양한 프로그래밍 언어와 기술을 익히고, 이를 활용하여 창의적이고 사용자 친화적인 웹 솔루션을 제공합니다...
-    </p>
 
-    <h3>SKILLS</h3>
-    <ul class="skills-list">
-      <li><span class="skill-tag">&lt;/&gt;</span> HTML</li>
-      <li><span class="skill-tag">&lt;/&gt;</span> MySQL</li>
-      <li><span class="skill-tag">&lt;/&gt;</span> JAVA</li>
-      <li><span class="skill-tag">&lt;/&gt;</span> AngularJS</li>
-      <li><span class="skill-tag">&lt;/&gt;</span> PHP</li>
-      <li><span class="skill-tag">&lt;/&gt;</span> JQuery</li>
-      <li><span class="skill-tag">&lt;/&gt;</span> CSS</li>
-      <li><span class="skill-tag">&lt;/&gt;</span> Bootstrap</li>
+  <!-- ── NAV ── -->
+  <nav id="navbar">
+    <a href="#home" class="nav-logo">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="16,2 30,9 30,23 16,30 2,23 2,9" fill="none" stroke="#7c5cbf" stroke-width="2"/>
+        <polygon points="16,8 24,12 24,22 16,26 8,22 8,12" fill="#7c5cbf" opacity="0.25"/>
+        <circle cx="16" cy="16" r="3" fill="#7c5cbf"/>
+      </svg>
+      BOS PORTFOLIO
+    </a>
+    <button class="nav-hamburger" id="hamburger" aria-label="메뉴">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#projects">PROJECTS</a></li>
+      <li><a href="#portfolio">PORTFOLIO</a></li>
+      <li><a href="#contact">CONTACT</a></li>
     </ul>
+  </nav>
 
-    <h3>CAREER</h3>
-    <ul class="career-list">
-      <li>에이전시 웹개발 및 웹사이트 제작</li>
-      <li>에이전시 웹개발 팀장</li>
-      <li>BOS대학 컴퓨터공학 전공</li>
-    </ul>
+  <!-- ── HERO ── -->
+  <section class="hero" id="home">
+    <div class="hero-mesh"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-lines">
+      <svg viewBox="0 0 1440 700" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="lg1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%"   stop-color="#7c5cbf" stop-opacity="0"/>
+            <stop offset="50%"  stop-color="#7c5cbf" stop-opacity="0.7"/>
+            <stop offset="100%" stop-color="#7c5cbf" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <path d="M-100,180 Q250,80  550,280 T1150,180 T1600,280" stroke="url(#lg1)" fill="none" stroke-width="1.5"/>
+        <path d="M-100,260 Q300,140 620,340 T1220,240 T1600,360" stroke="url(#lg1)" fill="none" stroke-width="1"/>
+        <path d="M-100,340 Q260,220 560,400 T1160,300 T1600,440" stroke="url(#lg1)" fill="none" stroke-width="1.5"/>
+        <path d="M-100,420 Q340,300 650,480 T1260,380 T1600,500" stroke="url(#lg1)" fill="none" stroke-width="1"/>
+        <path d="M-100,140 Q420,40  720,240 T1320,140 T1600,240" stroke="url(#lg1)" fill="none" stroke-width="0.8"/>
+        <path d="M-100,500 Q210,400 510,560 T1110,460 T1600,560" stroke="url(#lg1)" fill="none" stroke-width="1"/>
+      </svg>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">HONG SEONG BIN</p>
+      <h1 class="hero-title">WEB DEVELOPER<br>PORTFOLIO</h1>
+    </div>
+    <div class="hero-scroll">
+      <span>SCROLL</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section class="about-section" id="about">
+    <h2 class="section-title">ABOUT</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="about-name">홍성빈 <em>/ 25세</em></p>
+        <p class="about-desc">
+          안녕하세요! 웹 개발자 홍성빈입니다.<br>
+          다양한 프로젝트를 통해 다양한 프로그래밍 언어와 기술을 익히고, 이를 활용하여
+          창의적이고 사용자 친화적인 웹 솔루션을 제공하는 데에 열정을 가지고 있습니다.
+          깊은 문제 해결 능력과 팀워크로, 프로젝트의 성공을 위해 최선을 다하고 있습니다.
+          항상 새로운 도전을 환영하며, 협업을 통해 함께 성장할 수 있는 기회를 기다리고 있습니다.
+        </p>
+
+        <p class="label">SKILLS</p>
+        <div class="skills-wrap">
+          <span class="skill-tag"><i>&lt;/&gt;</i> HTML</span>
+          <span class="skill-tag"><i>&lt;/&gt;</i> CSS</span>
+          <span class="skill-tag"><i>&lt;/&gt;</i> JavaScript</span>
+          <span class="skill-tag"><i>&lt;/&gt;</i> JQuery</span>
+          <span class="skill-tag"><i>&lt;/&gt;</i> Bootstrap</span>
+          <span class="skill-tag"><i>&lt;/&gt;</i> PHP</span>
+          <span class="skill-tag"><i>&lt;/&gt;</i> JAVA</span>
+          <span class="skill-tag"><i>&lt;/&gt;</i> AngularJS</span>
+          <span class="skill-tag"><i>&lt;/&gt;</i> MySQL</span>
+        </div>
+
+        <p class="label">CAREER</p>
+        <ul class="career-list">
+          <li>에이전시 웹개발 및 웹사이트 제작</li>
+          <li>에이전시 웹개발팀 팀장</li>
+          <li>BOS대학 컴퓨터공학 전공</li>
+        </ul>
+      </div>
+
+      <div class="about-photo-wrap">
+        <div class="about-photo">
+          <img src="assets/images/증명사진.png" alt="홍성빈 프로필">
+        </div>
+        <div class="photo-deco"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <div class="projects-bg" id="projects">
+    <div class="projects-inner">
+      <h2 class="section-title">PROJECTS</h2>
+      <div class="projects-grid" id="projects-container">
+        <!-- fetch → assets/components/projects.html -->
+        <div class="projects-loading">불러오는 중...</div>
+      </div>
+    </div>
   </div>
 
-  <div class="about-image">
-    <img src="assets/images/profile.jpg" alt="홍성빈 프로필 사진">
+  <!-- ── PORTFOLIO ── -->
+  <section class="portfolio-section" id="portfolio">
+    <h2 class="section-title">PORTFOLIO</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item pi-wide">
+        <div class="pi-inner" style="background:linear-gradient(135deg,#0f0c29,#302b63);">
+          <span>🎨</span>
+          <p>UI / UX Design</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <div class="pi-inner" style="background:linear-gradient(135deg,#1a1a2e,#16213e);">
+          <span>📱</span>
+          <p>Responsive Web</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <div class="pi-inner" style="background:linear-gradient(135deg,#0d0d0d,#1a0a3a);">
+          <span>⚙️</span>
+          <p>Backend API</p>
+        </div>
+      </div>
+      <div class="portfolio-item pi-wide">
+        <div class="pi-inner" style="background:linear-gradient(135deg,#0a0a1a,#1f1f4a);">
+          <span>🗄️</span>
+          <p>Database Design</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <div class="contact-section" id="contact">
+    <div class="contact-inner">
+      <h2 class="section-title light">CONTACT</h2>
+      <p class="contact-desc">
+        새로운 프로젝트나 협업 기회에 대해 언제든지 연락주세요.<br>
+        함께 멋진 것을 만들어 나갈 수 있기를 기대합니다.
+      </p>
+      <div class="contact-btns">
+        <a href="mailto:hong@example.com" class="btn btn-primary">✉ 이메일 보내기</a>
+        <a href="https://github.com/rudeodud" target="_blank" class="btn btn-outline">GitHub</a>
+        <a href="#" class="btn btn-outline">LinkedIn</a>
+      </div>
+    </div>
   </div>
-</section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    © 2026 HONG SEONG BIN · BOS PORTFOLIO · ALL RIGHTS RESERVED
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
