@@ -1,195 +1,117 @@
-/* Reset & 기본 스타일 */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background-color: #fafafa;
-  color: #222;
-  line-height: 1.6;
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: auto;
-}
-
-/* 프로필 헤더 - 오른쪽 사진 */
-.profile {
+.about {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background-color: #ffffff;
-  border-radius: 20px; /* 둥근 사각형 */
-  padding: 40px 30px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  align-items: flex-start;
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+  gap: 40px;
   flex-wrap: wrap;
-  margin-bottom: 60px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
 }
 
-/* 프로필 텍스트 영역 */
-.profile-text {
+.about-text {
   flex: 1;
-  min-width: 250px;
+  min-width: 280px;
 }
 
-.profile-text h1 {
+.about-text h2 {
+  font-size: 2.2rem;
   font-weight: 700;
-  font-size: 2.8rem;
-  color: #111;
-  margin-bottom: 10px;
-}
-
-.profile-text p {
-  font-size: 1.1rem;
-  color: #555;
   margin-bottom: 20px;
+  text-align: left;
+  color: #000;
 }
 
-/* 기술 스택 */
-.skills {
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.about-text strong {
+  color: #5a2ea6; /* 보라 톤 강조색 */
+  font-weight: 700;
+}
+
+.about-text h3 {
+  font-weight: 700;
+  color: #5a2ea6;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.skills-list, .career-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  list-style: none;
 }
 
-.skills li {
-  background-color: #e0e0e0;
-  padding: 8px 16px;
-  border-radius: 15px;
-  font-weight: 600;
+.skills-list li, .career-list li {
+  font-size: 0.95rem;
   color: #444;
-  transition: background-color 0.3s ease;
+  background-color: #f2e9ff;
+  padding: 8px 12px;
+  border-radius: 10px;
 }
 
-.skills li:hover {
-  background-color: #a0a0a0;
-  color: #fff;
-}
-
-/* 프로필 이미지 */
-.profile-image-container {
-  flex: 0 0 160px;
-  display: flex;
-  justify-content: flex-end;
-  margin-left: 20px;
-}
-
-.profile-img {
-  width: 160px;
-  height: 160px;
-  border-radius: 15px; /* 사각 + 살짝 둥글게 */
-  object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.profile-img:hover {
-  transform: scale(1.05);
-}
-
-/* 프로젝트 섹션 */
-.projects {
-  margin-top: 20px;
-}
-
-.projects h2 {
+.skill-tag {
+  background-color: #d7c9f2;
+  color: #5a2ea6;
+  padding: 2px 6px;
+  border-radius: 5px;
   font-weight: 700;
-  font-size: 2rem;
-  color: #111;
-  margin-bottom: 24px;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 6px;
+  margin-right: 6px;
+  font-family: monospace;
 }
 
-/* 프로젝트 그리드 */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-}
-
-/* 프로젝트 카드 */
-.project-card {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  padding: 20px;
-  display: flex;
+.career-list {
   flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
-}
-
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-}
-
-.project-card h3 {
-  font-size: 1.4rem;
-  color: #222;
-  margin-bottom: 12px;
-  font-weight: 700;
-}
-
-.project-card p {
-  flex-grow: 1;
+  gap: 6px;
+  background: none;
+  padding-left: 16px;
   color: #555;
-  font-size: 1rem;
-  margin-bottom: 20px;
-  line-height: 1.4;
+  font-weight: 500;
+  border-radius: 0;
 }
 
-/* 링크 버튼 */
-.project-card a {
-  text-align: center;
-  display: inline-block;
-  padding: 10px 22px;
-  background-color: #007acc;
-  color: white;
-  border-radius: 25px;
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0,122,204,0.4);
-  transition: background-color 0.3s ease;
+.about-image {
+  flex: 0 0 220px;
+  display: flex;
+  justify-content: center;
 }
 
-.project-card a:hover {
-  background-color: #005fa3;
+.about-image img {
+  width: 220px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 /* 반응형 */
-@media (max-width: 600px) {
-  body {
-    padding: 30px 15px;
-  }
-  
-  .profile {
+@media (max-width: 700px) {
+  .about {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-
-  .profile-image-container {
+  
+  .about-text {
+    min-width: auto;
+  }
+  
+  .about-image {
+    margin-top: 30px;
+  }
+  
+  .skills-list, .career-list {
     justify-content: center;
-    margin-left: 0;
-    margin-top: 20px;
-  }
-
-  .profile-text h1 {
-    font-size: 2.2rem;
-  }
-
-  .skills li {
-    font-size: 0.9rem;
-    padding: 7px 14px;
-  }
-
-  .projects h2 {
-    font-size: 1.6rem;
   }
 }
