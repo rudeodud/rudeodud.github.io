@@ -314,6 +314,7 @@ ul { list-style: none; }
 }
 .skill-tag:hover i { color: rgba(255,255,255,0.65); }
 
+/* ── CAREER LIST (일반 bullet) ── */
 .career-list li {
   font-size: 14px;
   color: #555;
@@ -329,6 +330,37 @@ ul { list-style: none; }
   line-height: 1.4;
 }
 
+/* ── CAREER LIST (웹사이트 아이콘 아이템) ── */
+.career-list li.website-item {
+  padding: 7px 0;
+  margin: 20px;
+  display: inline-block;
+}
+
+.career-list li.website-item::before {
+  display: none;
+}
+
+.career-list li.website-item a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #555;
+  transition: color 0.2s;
+}
+
+.career-list li.website-item a:hover {
+  color: var(--purple);
+}
+
+.career-list li.website-item img {
+  width: 80px !important;
+  height: 80px !important;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* ── ABOUT PHOTO ── */
 .about-photo-wrap {
   position: relative;
   margin-top: 10px;
