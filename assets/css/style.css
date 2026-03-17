@@ -45,18 +45,6 @@ ul { list-style: none; }
 }
 #navbar.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.07); }
 
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: 'Space Mono', monospace;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  color: var(--text);
-}
-.nav-logo svg { width: 30px; height: 30px; flex-shrink: 0; }
-
 .nav-links {
   display: flex;
   gap: 44px;
