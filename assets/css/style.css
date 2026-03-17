@@ -333,7 +333,7 @@ ul { list-style: none; }
 /* ── CAREER LIST (웹사이트 아이콘 아이템) ── */
 .career-list li.website-item {
   padding: 7px 0;
-  margin: 20px;
+  margin: px;
   display: inline-block;
 }
 
